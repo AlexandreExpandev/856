@@ -1,0 +1,94 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.counter-display {
+  font-size: 8rem;
+  margin: 2rem 0;
+  min-height: 12rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.control-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+button {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.start-button {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.start-button:hover:not(:disabled) {
+  background-color: #45a049;
+}
+
+.start-button-flash {
+  animation: flash 0.5s;
+}
+
+@keyframes flash {
+  0% { background-color: #4CAF50; }
+  50% { background-color: #8bc34a; }
+  100% { background-color: #4CAF50; }
+}
+
+.control-buttons {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+}
+
+.pause-button {
+  background-color: #ff9800;
+  color: white;
+  flex: 1;
+}
+
+.pause-button:hover:not(:disabled) {
+  background-color: #e68a00;
+}
+
+.reset-button {
+  background-color: #f44336;
+  color: white;
+  flex: 1;
+}
+
+.reset-button:hover:not(:disabled) {
+  background-color: #d32f2f;
+}
+
+.speed-control {
+  margin-top: 1rem;
+}
